@@ -1,0 +1,13 @@
+ButtonIds:
+sim0
+sim1
+
+
+Behaviors:
+
+START
+buttonId:sim0
+type:held
+op:HoldingOp
+downDuration:1000
+
