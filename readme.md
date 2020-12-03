@@ -46,4 +46,13 @@ op:{held op}
 downDuration:{time in ms}
 ```
 
+**Example event**
+```
+START
+buttonId:sim0
+type:held
+op:HoldingOp
+downDuration:1000
+```
+
 ## Usage
