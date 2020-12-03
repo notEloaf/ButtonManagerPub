@@ -11,8 +11,10 @@ The config file is a simple txt document that defines the id of each button and 
 ## Button Events
 Button Down Event:
 This event occurs when a button is pressed down.
->type:buttonDown
->op:{button Op}
+```
+type:buttonDown
+op:{button Op}
+```
 
 Button Up Event:
 This event occurs when a button is released.
