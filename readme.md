@@ -56,3 +56,25 @@ downDuration:1000
 ```
 
 ## Usage
+Events are sent back using a callback and a notification handler.
+```
+class MyNotifications : public ButtonManager::IButtonNotification{
+public:
+    virtual void recallFunc(std::string func){
+        std::cout << "func = " << func << "\n\n";
+
+        if(func.compare("exampleFunc") == 0){
+            std::cout << "ButtonDown" << std::endl;
+        }
+    }
+};
+
+MyNotifications g_ioNotificationHandler;
+
+int main(){
+    ButtonManager bm;
+    bm.setButtonInterface(&g_ioNotificationHandler);
+}
+```
+First you create the notification manager and override the function recallFunc. This is function the button events call when triggered and they pass whatever you named their {op} in the config.txt so all you have to is compare it to other strings (in this case exampleFunc). Then instantiate an instance of the notification manager and set the button interface to it. You're button manager is now completely setup, all you have to do is edit the config.txt file to change the buttons interactions.
+
