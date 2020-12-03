@@ -18,14 +18,32 @@ op:{button Op}
 
 Button Up Event:
 This event occurs when a button is released.
-
+```
+type:buttonUp
+op:{button Op}
+```
 Timed Click Event:
 This event has two different interactions. Given a time "click duration" if the button is pressed down and released in less time than the "click duration" then it is a short press, otherwise it is a long press.
+```
+type:timedClick
+shortOp:{short click op}
+longOp:{long click op}
+clickDuration:{time in ms}
+```
 
 Clicked Event:
 This event occurs when a buttons is pressed and released. (functionally the same as the button up event, just included for ease of use)
+```
+type:clicked
+op:{clicked op}
+```
 
 Held Event:
 This event will only occur when a button has been held for more than x ms, once the event occurs no more events can occur.
+```
+type:held
+op:{held op}
+downDuration:{time in ms}
+```
 
 ## Usage
